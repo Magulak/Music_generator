@@ -16,3 +16,9 @@ for instrument in midi_data.instruments:
     instr = instrument
     instrument_name = pretty_midi.program_to_instrument_name(instrument.program)
     print('Instrument name:', instrument_name)
+
+    for i, note in enumerate(instrument.notes[:10]):
+        note_name = pretty_midi.note_number_to_name(note.pitch)
+        duration = note.end - note.start
+        print(f'{i}: pitch={note.pitch}, note_name={note_name},'
+              f' duration={duration:.4f}')
