@@ -28,6 +28,8 @@ class ExtractAndSortData:
                 duration = note.end - note.start
                 print(f'{i}: pitch={note.pitch}, note_name={note_name},'
                       f' duration={duration:.3f}')
+            #    sorted_notes = sorted(note.pitch, key=lambda,durration)
+
 
     def sort_notes(self):
         """ this function sorts notes inside instrument.notes, basing on note_start_time """
